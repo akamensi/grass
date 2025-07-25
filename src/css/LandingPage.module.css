@@ -1,0 +1,98 @@
+.hero {
+    background-image: url('../assets/sky-views-dubai.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container {
+    background-color: var(--color-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+} */
+ .container {
+    background-color: var(--color-bg);
+    padding: 60px;                    /* plus grand */
+    border-radius: 20px;              /* coins plus arrondis */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ombre plus prononcée */
+    text-align: center;
+    max-width: 900px;                 /* plus large */
+    transition: background-color 0.3s ease;
+}
+
+.container:hover {
+    background-color: rgba(255,255,255,0.3); /* plus transparent au survol */
+}
+
+.h1 {
+    font-size: 4em;
+    color: var(--color-primary);
+    /* color: #cef47d; */
+    margin: 0;
+    padding-top: 10px;
+}
+
+.h2 {
+    font-size: 1.5em;
+    color: var(--color-text);
+    margin: 10px 0;
+    
+}
+
+.p {
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin: 5px 0;
+    padding-top: 10px;
+}
+
+.highlight {
+    padding-top: 10px;
+    background-color: var(--color-tertiary);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* display: inline-block; */
+}
+
+/* .button {
+    background-color: var(--color-secondary);
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b23c7e;
+} */
+
+.button {
+    padding-top: 10px;
+    background-color: #000;           /* fond noir */
+    color: #fff;                      /* texte blanc */
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 25px;              /* coins arrondis */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #fff;           /* fond blanc au survol */
+    color: #000;                      /* texte noir au survol */
+    content: "choose you";            /* cette propriété ne fonctionne pas en CSS, il faut gérer le texte en JS/React */
+}
