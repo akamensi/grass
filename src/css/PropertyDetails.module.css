@@ -337,6 +337,7 @@
 .messageButton {
   background: #2c3e1a;
   color: white;
+  text-decoration: none;
 }
 
 .callButton {

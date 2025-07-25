@@ -1,0 +1,344 @@
+/* Leads.module.css */
+.container {
+  background-color: #f8faf5;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e1a;
+  padding-bottom: 20px;
+  background-image: linear-gradient(rgba(248, 250, 245, 0.9), rgba(248, 250, 245, 0.9));
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(to right, #a0d44f, #cef47d);
+  color: #2c3e1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #2c3e1a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.backButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  flex: 1;
+  text-align: center;
+}
+
+.placeholder {
+  width: 46px;
+}
+
+/* Currency Selector */
+.currencySelector {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.currencySelect {
+  background-color: white;
+  border: 1px solid #e0f0cb;
+  border-radius: 12px;
+  padding: 12px 40px 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e1a;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235a6e3d'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  max-width: 200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.currencySelect:hover {
+  border-color: #a0d44f;
+  box-shadow: 0 0 0 3px rgba(161, 212, 79, 0.2);
+}
+
+.currencySelect:focus {
+  outline: none;
+  border-color: #a0d44f;
+  box-shadow: 0 0 0 3px rgba(161, 212, 79, 0.3);
+}
+
+/* Content */
+.content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  font-size: 24px;
+  color: #2c3e1a;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: #5a6e3d;
+  font-size: 16px;
+}
+
+/* Plans Container */
+.plansContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.planCard {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.planCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.planCard.selected {
+  border-color: #a0d44f;
+  box-shadow: 0 4px 20px rgba(161, 212, 79, 0.3);
+}
+
+.planTitle {
+  color: #2c3e1a;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.originalPrice {
+  color: #a0aec0;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.discountedPrice {
+  color: #2c3e1a;
+  font-weight: 800;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.daysContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.daysBadge {
+  background: #e0f0cb;
+  color: #5a6e3d;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  align-self: flex-start;
+}
+.popular {
+  background: #105247;
+  color: #cef47d;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  align-self: flex-start;
+  text-align: center;
+}
+.recommended {
+  background: #cef47d;      /* couleur de fond inversée */
+  color: #105247;           /* texte foncé */
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  align-self: flex-start;
+  text-align: center;
+}
+
+/* Custom Card */
+.customCard {
+  background: #f7faf5;
+  border: 2px dashed #cef47d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.customCard .planTitle {
+  min-height: auto;
+  margin-bottom: 10px;
+}
+
+.customText {
+  color: #5a6e3d;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.customIcon {
+  width: 50px;
+  height: 50px;
+  background: #cef47d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.customIcon svg {
+  width: 24px;
+  height: 24px;
+  fill: #2c3e1a;
+}
+
+/* Selected Badge */
+.selectedBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, #a0d44f, #cef47d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selectedBadge svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Action Bar */
+.actionBar {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.saveButton {
+  /* background: linear-gradient(to right, #2c3e1a, #3d5525); */
+  background: black;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.saveButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to right, #3d5525, #4a672d);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plansContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .planTitle {
+    font-size: 18px;
+    min-height: 50px;
+  }
+  
+  .discountedPrice {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 15px;
+  }
+  
+  .header {
+    padding: 12px 15px;
+  }
+  
+  .title {
+    font-size: 16px;
+  }
+  
+  .intro h2 {
+    font-size: 20px;
+  }
+  
+  .saveButton {
+    padding: 16px;
+    font-size: 18px;
+  }
+}

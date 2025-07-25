@@ -1,10 +1,11 @@
+/* AddProperty.module.css */
 .container {
   background-color: #f8faf5;
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #2c3e1a;
   padding-bottom: 20px;
-    background-image: url('../assets/sky-views-dubai.jpg');
+  background-image: url('../assets/sky-views-dubai.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -56,84 +57,116 @@
 /* Form Container */
 .formContainer {
   padding: 20px;
-}
-
-.form {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Image Upload Section */
-.imageSection {
-  margin-bottom: 25px;
-}
-
-.imageLabel {
-  display: block;
-  cursor: pointer;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 2px dashed #cef47d;
-  background-color: #f0f9e0;
+/* Trakheesi Section */
+.trakheesiSection {
+  margin-bottom: 30px;
   text-align: center;
+}
+
+.trakheesiButton {
+  background: linear-gradient(to right, #2c3e1a, #3d5525);
+  color: #cef47d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-decoration: none;
+
 }
 
-.imageLabel:hover {
-  border-color: #a0d44f;
-  background-color: #e0f0cb;
+.trakheesiButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-.imagePlaceholder {
+.orDivider {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin: 20px 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: #a0d44f;
+}
+
+.orText {
+  padding: 0 15px;
   color: #5a6e3d;
-}
-
-.imagePlaceholder svg {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  fill: #a0d44f;
-}
-
-.imagePlaceholder span {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
 }
 
-.imageInput {
-  display: none;
+/* Form Sections */
+.form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.imagePreview {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0f0cb;
 }
 
-/* Form Styles */
-.formGroup {
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e1a;
+}
+
+.counter {
+  font-size: 14px;
+  color: #5a6e3d;
+  font-weight: 600;
+}
+
+.subSection {
   margin-bottom: 20px;
 }
 
-.formGroup label {
-  display: block;
-  margin-bottom: 8px;
+.subTitle {
+  margin: 0 0 10px 0;
+  font-size: 16px;
   font-weight: 600;
-  color: #2c3e1a;
-  font-size: 14px;
+  color: #3d5525;
 }
 
-.formGroup input,
-.formGroup textarea,
-.formGroup select {
-  width: 100%;
+.inputGroup {
+  margin-bottom: 15px;}
+
+/* Consistent Input Fields */
+.inputField, .textareaField {
+  width: 90%;
   padding: 14px;
   border: 1px solid #e0f0cb;
   border-radius: 12px;
@@ -141,28 +174,44 @@
   font-size: 15px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+  margin-bottom: 10px;
 }
 
-.formGroup input:focus,
-.formGroup textarea:focus,
-.formGroup select:focus {
+.selectInput{
+  width: 70%;
+  padding: 14px;
+  border: 1px solid #e0f0cb;
+  border-radius: 12px;
+  background-color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+}
+
+.inputField:focus, 
+.textareaField:focus, 
+.selectInput:focus {
   outline: none;
   border-color: #a0d44f;
   box-shadow: 0 0 0 3px rgba(161, 212, 79, 0.2);
 }
 
-.formRow {
+.textareaField {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Improved Select Group Layout */
+.selectGroup {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
-.formRow .formGroup {
-  flex: 1;
-  margin-bottom: 0;
-}
-
-.selectInput {
+.selectGroup .selectInput {
+  flex: 2;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235a6e3d'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -171,15 +220,174 @@
   padding-right: 40px;
 }
 
+.selectGroup .inputField {
+  flex: 1;
+}
+
+/* Amenities */
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #444;
+  padding: 8px;
+  background: #f8faf5;
+  border-radius: 8px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #a0d44f;
+  cursor: pointer;
+}
+
+/* Photo Section */
+.photoSection {
+  margin-bottom: 25px;
+}
+
+.photoHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.photoRequired, .photoOptional {
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.photoRequired {
+  background: #ffd166;
+  color: #8a6d0c;
+}
+
+.photoOptional {
+  background: #e0f0cb;
+  color: #5a6e3d;
+}
+
+.photoLabel {
+  display: block;
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px dashed #cef47d;
+  background-color: #f0f9e0;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoLabel:hover {
+  border-color: #a0d44f;
+  background-color: #e0f0cb;
+}
+
+.photoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5a6e3d;
+  padding: 20px;
+}
+
+.photoPlaceholder svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  fill: #a0d44f;
+}
+
+.photoPlaceholder span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.photoInput {
+  display: none;
+}
+
+.photoPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.secondaryPhotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.addMorePhotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(161, 212, 79, 0.1);
+  border: 2px dashed #a0d44f;
+  border-radius: 10px;
+  color: #5a6e3d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addMorePhotos:hover {
+  background: rgba(161, 212, 79, 0.2);
+}
+
+.addMorePhotos svg {
+  width: 30px;
+  height: 30px;
+  fill: #a0d44f;
+  margin-bottom: 5px;
+}
+
 /* Submit Button */
 .submitButton {
   width: 100%;
-  background: linear-gradient(to right, #a0d44f, #cef47d);
-  color: #2c3e1a;
+  /* background: linear-gradient(to right, #a0d44f, #cef47d); */
+  background-color: black;
+  /* color: #2c3e1a; */
+  color: white;
   border: none;
   padding: 16px;
   border-radius: 14px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(161, 212, 79, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.submitButton2 {
+  width: 100%;
+  /* background: linear-gradient(to right, #a0d44f, #cef47d); */
+  background-color: white;
+  /* color: #2c3e1a; */
+  color: black;
+  border: 2px solid black;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 20px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(161, 212, 79, 0.3);
@@ -190,4 +398,40 @@
 .submitButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(161, 212, 79, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .selectGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .amenitiesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .secondaryPhotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 15px;
+  }
+  
+  .section {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .trakheesiButton {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+  }
 }

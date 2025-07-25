@@ -7,6 +7,7 @@ import Profile from './components/Profile'
 import AddProperty from './components/AddProperty'
 import PropertyDetails from './components/PropertyDetails'
 import MakeOffer from './components/MakeOffer'
+import Leads from './components/Leads'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/add-property" element={<AddProperty />} />
       <Route path="/property-details" element={<PropertyDetails />} />
       <Route path="/make-offer" element={<MakeOffer />} />
+      <Route path="/leads" element={<Leads />} />
     </Routes>
       
     </>
